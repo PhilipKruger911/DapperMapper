@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Title>A Dapper mapper that maps properties to column names.</Title>
+    <Authors>Philip Kruger</Authors>
+    <Description>A Dapper mapper that maps properties to column names. Decorate properties with a ColumnAttribute.
+</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.11" />
+  </ItemGroup>
+
+</Project>

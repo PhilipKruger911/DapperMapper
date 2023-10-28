@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Edgy.DapperMapper", "Edgy.DapperMapper\Edgy.DapperMapper.csproj", "{F96DC946-8E8B-4C40-8C00-6839B3DD5937}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Edgy.DapperMapper.Test", "Edgy.DapperMapper.Test\Edgy.DapperMapper.Test.csproj", "{7CA46BDF-E9DA-4800-9888-B53742BA1232}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{FB433B6F-E171-44B8-B548-838D1C116742}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F96DC946-8E8B-4C40-8C00-6839B3DD5937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F96DC946-8E8B-4C40-8C00-6839B3DD5937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F96DC946-8E8B-4C40-8C00-6839B3DD5937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F96DC946-8E8B-4C40-8C00-6839B3DD5937}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CA46BDF-E9DA-4800-9888-B53742BA1232}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CA46BDF-E9DA-4800-9888-B53742BA1232}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CA46BDF-E9DA-4800-9888-B53742BA1232}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CA46BDF-E9DA-4800-9888-B53742BA1232}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDB899A8-DC2A-4CAE-AD4E-40EB1C0C2840}
+	EndGlobalSection
+EndGlobal
