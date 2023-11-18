@@ -26,3 +26,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    - name: Push Nuget Package
+      run: dotnet nuget push ./Edgy.DapperMapper/bin/Release/*.nupkg  -k ${NUGET_TOKEN} --source https://api.nuget.org/v3/index.json
+      env:
+        NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
