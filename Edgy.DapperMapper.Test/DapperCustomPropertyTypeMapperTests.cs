@@ -1,16 +1,15 @@
-using DapperMapper;
 using Edgy.DapperMapper.Test.Entities;
 
 namespace Edgy.DapperMapper.Test;
 
 [TestClass]
-public class PropertyToColumnMapperTests
+public class DapperCustomPropertyTypeMapperTests
 {
     [TestMethod]
-    public void Map_WithMappedProperties_SetsTypeMap()
+    public void Map_EntityWithPropertiesThatHaveColumnAttribute_SetsTypeMap()
     {
         // Act
-        PropertyToColumnMapper.Map<TestEntity>();
+        DapperCustomPropertyTypeMapper.Map<TestEntity>();
 
         // Assert
         var typeMap = Dapper.SqlMapper.GetTypeMap(typeof(TestEntity));
@@ -19,17 +18,17 @@ public class PropertyToColumnMapperTests
     }
 
     [TestMethod]
-    public void MapAll_WithMappedProperties_SetsTypeMap()
+    public void MapAll_EntitiesWithTableAttributeAndPropertiesThatHaveColumnAttribute_SetsTypeMaps()
     {
         // Act
-        PropertyToColumnMapper.MapAll();
+        DapperCustomPropertyTypeMapper.MapAll();
 
         // Assert
-        var firstEntityTypeMap = Dapper.SqlMapper.GetTypeMap(typeof(FirstEntityWithDapperMapAttribute));
+        var firstEntityTypeMap = Dapper.SqlMapper.GetTypeMap(typeof(FirstEntityWithDapperMapperAttribute));
         firstEntityTypeMap.AssertMemberMap("ENTITY_ID", "Id");
         firstEntityTypeMap.AssertMemberMap("ENTITY_NAME", "Name");
 
-        var secondEntityTypeMap = Dapper.SqlMapper.GetTypeMap(typeof(SecondEntityWithDapperMapAttribute));
+        var secondEntityTypeMap = Dapper.SqlMapper.GetTypeMap(typeof(SecondEntityWithDapperMapperAttribute));
         secondEntityTypeMap.AssertMemberMap("ENTITY_ID", "Id");
         secondEntityTypeMap.AssertMemberMap("ENTITY_DATE_TIME", "DateTime");
     }

@@ -2,7 +2,7 @@
 
 namespace Edgy.DapperMapper.Test;
 
-public static class ITypeMapAssertionExtensions
+public static class ITypeMapExtensions
 {
     public static void AssertMemberMap(this ITypeMap typeMap, string columnName, string propertyName)
     {

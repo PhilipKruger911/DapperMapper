@@ -1,10 +1,9 @@
 ﻿using Dapper;
-using Edgy.DapperMapper;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DapperMapper;
+namespace Edgy.DapperMapper;
 
-public static class PropertyToColumnMapper
+public static class DapperCustomPropertyTypeMapper
 {
     /// <summary>
     /// Map properties to column names for the given type <see cref="{T}"/>.
@@ -19,7 +18,7 @@ public static class PropertyToColumnMapper
     /// </summary>
     public static void MapAll()
     {
-        var types = GetTypesWithDapperMapAttribute();
+        var types = GetTypesWithTableAttribute();
         foreach (var type in types)
         {
             Map(type);
@@ -37,19 +36,25 @@ public static class PropertyToColumnMapper
                     .OfType<ColumnAttribute>()
                     .Any(attr => attr.Name == columnName));
 
+            // PropertyInfo will be null for columns that are returned by a query for which the entity has no matching
+            // property/ColumnAttribute combination. A null return value for propertyInfo does not produce any errors.
+
+#pragma warning disable CS8603 // Possible null reference return.
             return propertyInfo;
+#pragma warning restore CS8603 // Possible null reference return.
         });
 
         Dapper.SqlMapper.SetTypeMap(type, customPropertyTypeMap);
     }
-    private static IEnumerable<Type> GetTypesWithDapperMapAttribute()
+
+    private static IEnumerable<Type> GetTypesWithTableAttribute()
     {
         var assemblies = AppDomain.CurrentDomain.GetAssemblies();
         foreach (var assembly in assemblies)
         {
             foreach (Type type in assembly.GetTypes())
             {
-                if (type.GetCustomAttributes(typeof(DapperMapAttribute), true).Length > 0)
+                if (type.GetCustomAttributes(typeof(TableAttribute), true).Length > 0)
                 {
                     yield return type;
                 }

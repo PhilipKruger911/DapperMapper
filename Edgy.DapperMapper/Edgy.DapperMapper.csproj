@@ -3,10 +3,11 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Title>A Dapper mapper that maps properties to column names.</Title>
+    <Title>Edgy.DapperMapper</Title>
     <Authors>Philip Kruger</Authors>
-    <Description>A Dapper mapper that maps properties to column names. Decorate properties with a ColumnAttribute.
-</Description>
+    <Description>
+      A Dapper mapper that maps entity properties to column names.
+    </Description>
   </PropertyGroup>
 
   <ItemGroup>

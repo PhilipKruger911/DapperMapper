@@ -2,8 +2,8 @@
 
 namespace Edgy.DapperMapper.Test.Entities;
 
-[DapperMap]
-public class SecondEntityWithDapperMapAttribute
+[TableAttribute("TABLE_NAME_NOT_RELEVANT_ONLY_ATTRIBUTE")]
+public class SecondEntityWithDapperMapperAttribute
 {
     [Column("ENTITY_ID")]
     public int Id { get; set; }
