@@ -39,9 +39,7 @@ public static class DapperCustomPropertyTypeMapper
             // PropertyInfo will be null for columns that are returned by a query for which the entity has no matching
             // property/ColumnAttribute combination. A null return value for propertyInfo does not produce any errors.
 
-#pragma warning disable CS8603 // Possible null reference return.
             return propertyInfo;
-#pragma warning restore CS8603 // Possible null reference return.
         });
 
         Dapper.SqlMapper.SetTypeMap(type, customPropertyTypeMap);
