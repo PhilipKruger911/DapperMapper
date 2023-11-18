@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.1.3</Version>
+    <Version>1.1.4</Version>
     <Title>Edgy.DapperMapper</Title>
     <Authors>Philip Kruger</Authors>
     <Description>
@@ -13,16 +13,18 @@
       For the properties of a class/entity that are decorated with a ColumnAttribute, the name value of the ColumnAttribute represents the name of the column in the database.
     </Description>
     <PackageReleaseNotes>
+      1.1.4 - Add reference to github repo in package.
       1.1.3 - Update to Dapper 2.1.21 and all other packages to latest.
       1.1.2 - Reference README.md in package.
       1.1.1 - Add license file to package.
       1.1.0
       - Changed class name from PropertyToColumnMapper to DapperCustomPropertyTypeMapper and corrected namespace.
-      - Discontinued the DapperMapAttribute as the System.ComponentModel.DataAnnotations.Schema.TableAttribute is more suitable.      
+      - Discontinued the DapperMapAttribute as the System.ComponentModel.DataAnnotations.Schema.TableAttribute is more suitable.
       1.0.0 - Initial release
     </PackageReleaseNotes>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/PhilipKruger911/Edgy.DapperMapper</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
