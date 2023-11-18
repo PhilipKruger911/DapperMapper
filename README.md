@@ -12,10 +12,12 @@ In the example below, all the classes/entities that are part of the application 
 ```
 
 	DapperCustomPropertyTypeMapper.MapAll();
+
 ```
 
-In the example below, all the properties of the given class/entity that are decorated with a ColumnAttribute are mapped to a database column name.
+In the example below, all the properties of the given class/entity {T} that are decorated with a ColumnAttribute are mapped to a database column name.
 ```
 
-	DapperCustomPropertyTypeMapper.Map<Entity>();
+	DapperCustomPropertyTypeMapper.Map<T>();
+
 ```
